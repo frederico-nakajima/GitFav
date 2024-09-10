@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --Neutral:#fff;
+    --Caracteres-200:#7C7C8A;
+    --Caracteres-100:#E1E1E6;
+    --Ciano-200:#06181C ;
+    --Ciano-100:#092D38;
+    --Ciano-50:#4A808C;
+    --Danger:#F75A68;
+}
+
+body{
+    background-color:#000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+   
+}
+div#app{
+    width: 115.0rem;
+    height:100vh;
+    position: relative;
+    overflow: hidden; 
+}
+   
+   
+ 
+    
+    
+  
+
+div#app header{
+    width: 97.0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.8rem;
+    margin-top: 15.0rem;
+  
+    
+}
+
+
+
+div#app header .search{
+    display: flex;
+    margin-left: 10.0rem;
+   
+}
+
+div#app header .search #input-search{
+    height: 4.8rem;
+    width:46.2rem;
+    background:var(--Ciano-200) ;
+    border: none;
+    color: var(--Caracteres-200);
+    padding-left: 3.0rem;
+    margin-right:8px ;
+}
+
+
+div#app header .search #input-search::placeholder{
+    color: var(--Caracteres-200);
+    font-family: "Roboto",sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 3.0rem;
+   
+}
+
+div#app header #img {
+    position: relative;
+    cursor: pointer; 
+}
+
+div#app header #img #img01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease; 
+}
+
+div#app header #img #img02 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+
+div#app header #img:hover #img01 {
+    opacity: 0;
+}
+
+div#app header #img:hover #img02 {
+    opacity: 1;
+}
+div#app .table-container {
+    width: 100%;
+    max-height: 30.0rem;
+    overflow-y: auto; 
+    
+}
+
+
+div#app table {
+    margin-top: 95px;
+    
+    border-radius: 10px; 
+    overflow: hidden; 
+    border: 1px solid var(--Ciano-50);
+    border-collapse: separate;
+    background-color: #000;
+    max-height: 50.0rem;
+   
+}
+
+
+div#app table thead tr th{
+    text-align: left;
+    padding:  2.4rem 2.4rem 2.4rem 4.0rem;
+    height: 6.4rem;
+    color: var(--Caracteres-100);
+    font-family: "Roboto",sans-serif;
+    font-size: 2.0rem;
+    font-style: normal;
+    font-weight: 700;
+    
+    
+}
+div#app table  thead tr th:nth-child(1){
+    height: 4.8rem;
+    width: 50.4rem;
+    padding:  2.4rem 2.4rem 2.4rem 4.0rem;
+   
+}
+div#app table  thead tr th:nth-child(2){
+    height: 4.8rem;
+    width: 21.9rem;
+    padding:  2.4rem 2.4rem 2.4rem 4.0rem;
+}
+div#app table  thead tr th:nth-child(3){
+    height: 4.8rem;
+    width: 21.9rem;
+    padding:  2.4rem 2.4rem 2.4rem 4.0rem;
+}
+
+
+div#app table  thead tr th:nth-child(4){
+    height: 4.8rem;
+    width: 19.1rem;
+    padding:  2.4rem 2.4rem 2.4rem 4.0rem;
+}
+
+
+div#app table tbody{
+    display: block;
+    max-height: 40.0rem; 
+    overflow-y: scroll; 
+}
+
+
+
+
+div#app table tbody tr:nth-child(even){
+    background-color:var(--Ciano-200);
+    border-top: 1px solid #4A808C;
+    border-bottom: 1px solid var(--Ciano-100);
+}
+
+div#app table tbody tr:nth-child(odd){
+    background-color: transparent;
+
+}
+
+
+
+
+div#app table tbody tr td{
+   
+    background-color: transparent;
+    
+}
+
+div#app table tbody tr td.user{
+    
+    display: flex;
+    align-items: center;
+    gap:1.5rem ;
+  
+    
+}
+div#app table tbody tr td img{
+    width: 5rem;
+    height: 5rem;
+    
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+div#app table tbody tr td  a{
+    text-decoration: none;
+}
+
+div#app table tbody tr td  a p{
+    color:  var(--Caracteres-100);
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    
+    
+}
+
+div#app table tbody tr td  a span{
+    color:  var(--Caracteres-100);
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+   
+    
+}
+
+div#app table tbody tr td.repositories{
+    color:var(--Caracteres-100);
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 32px */
+}
+
+div#app table tbody tr td.followers{
+    color: var(--Caracteres-100);
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 32px */
+}
+
+div#app table tbody tr td .remove{
+    color: var(--Danger);
+    font-family: "Roboto",sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 32px */
+    background: transparent;
+    border: none;
+}
+
+div#app table tbody tr td:nth-child(1){
+    height: 96px;
+    width: 504px;
+    padding:  24px 24px 24px 40px;
+   
+}
+div#app table tbody tr td:nth-child(2){
+    height: 9.6rem;
+    width: 21.9rem;
+    padding:  2.4rem 2.4rem 2.4rem 4.0rem;
+}
+div#app table tbody tr td:nth-child(3){
+    height: 9.6rem;
+    width: 21.9rem;
+    padding:  2.4rem 2.4rem 2.4rem 4.0rem;
+}
+
+
+div#app table tbody tr td:nth-child(4){
+    height: 9.6rem;
+    width: 17.8rem;
+    padding:  2.4rem 2.4rem 2.4rem 4.0rem;
+}
+
+
+
+
+
+div#app table thead tr th{
+    background: var(--Ciano-100);
+    height: 6.4rem;
+    color:  var(--Caracteres-100);
+    font-family: 'Roboto',sans-serif;
+    font-size: 2.0rem;
+    font-style: normal;
+    font-weight: 700;
+    
+}
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; 
+  }
+    
+div#app table tbody::-webkit-scrollbar {
+    width: .8rem;
+}
+
+div#app table tbody::-webkit-scrollbar-thumb {
+    background-color: var(--Ciano-50);
+    border-radius: 1.0rem;
+}
+
+div#app table tbody::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.empty-message {
+    display: none; 
+    align-items: center;
+    margin-left: 250px;
+    margin-top: -300px;
+    color: #4E5455;
+    font-family: "Roboto Mono",sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24.781px; 
+}
+
+.empty-message img {
+    width:13.2rem;
+    height:13.2rem;
+    margin-right: 5rem;
+}
+
+
+
