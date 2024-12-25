@@ -42,7 +42,7 @@ div#app header{
     justify-content: space-between;
     align-items: center;
     height: 4.8rem;
-    margin-top: 15.0rem;
+    margin-top: 8.5rem;
   
     
 }
@@ -260,6 +260,7 @@ div#app table tbody tr td .remove{
     line-height: 160%; /* 32px */
     background: transparent;
     border: none;
+    cursor:pointer;
 }
 
 div#app table tbody tr td:nth-child(1){
